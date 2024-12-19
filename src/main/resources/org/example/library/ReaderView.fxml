@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="617.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.library.controllers.ReaderController">
+    <children>
+        <GridPane layoutX="231.0" layoutY="104.0" prefHeight="151.0" prefWidth="286.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="97.5" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.5" minWidth="10.0" prefWidth="188.5" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Reader ID:" />
+                <Label text="Fullname:" GridPane.rowIndex="1" />
+                <Label text="Address:" GridPane.rowIndex="2" />
+                <TextField fx:id="txtReaderId" GridPane.columnIndex="1" />
+                <TextField fx:id="txtReaderName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txtAddress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <GridPane layoutX="591.0" layoutY="104.0" prefHeight="151.0" prefWidth="286.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5" minWidth="10.0" prefWidth="108.5" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.5" minWidth="10.0" prefWidth="177.5" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Phone Number:" />
+                <TextField fx:id="txtPhone" GridPane.columnIndex="1" />
+            <Label text="Dob:" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dpDob" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+        <StackPane layoutX="32.0" layoutY="104.0" prefHeight="209.0" prefWidth="167.0" style="-fx-border-color: black;">
+            <children>
+                <ImageView fx:id="imgAvatar" fitHeight="206.0" fitWidth="167.0" layoutX="14.0" layoutY="115.0" onMouseClicked="#onSelectImg" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <Label fx:id="lbSelectedImage" text="Choose image..." />
+            </children>
+        </StackPane>
+        <Button layoutX="224.0" layoutY="279.0" mnemonicParsing="false" onAction="#onClickSave" prefHeight="34.0" prefWidth="104.0" text="Save" />
+        <Button layoutX="351.0" layoutY="279.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="34.0" prefWidth="104.0" text="Delete" />
+        <Button layoutX="479.0" layoutY="279.0" mnemonicParsing="false" onAction="#onClickRefresh" prefHeight="34.0" prefWidth="104.0" text="Refresh" />
+        <GridPane layoutX="379.0" layoutY="37.0" prefHeight="30.0" prefWidth="302.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="104.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="198.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="txtSearch" onKeyPressed="#onType" prefHeight="29.0" prefWidth="190.0" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+      <TableView fx:id="tbReaders" layoutX="1.0" layoutY="356.0" onMouseClicked="#onSelectedRow" prefHeight="262.0" prefWidth="944.0">
+        <columns>
+          <TableColumn fx:id="colReaderId" prefWidth="100.0" text="Reader ID" />
+          <TableColumn fx:id="colReaderName" prefWidth="149.5" text="Fullname" />
+            <TableColumn fx:id="colAddress" prefWidth="275.0" text="Address" />
+            <TableColumn fx:id="colPhone" prefWidth="223.0" text="Phone Number" />
+            <TableColumn fx:id="colDob" prefWidth="187.5" text="Dob" />
+        </columns>
+      </TableView>
+    </children>
+    <stylesheets>
+        <URL value="@css/Style.css" />
+        <URL value="@css/Metro-UI.css" />
+    </stylesheets>
+</AnchorPane>

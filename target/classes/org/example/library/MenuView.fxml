@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="621.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.library.controllers.MenuController">
+   <children>
+      <ListView fx:id="optionMenu" layoutY="27.0" onMouseClicked="#onChooseMenu" prefHeight="593.0" prefWidth="228.0" stylesheets="@css/listView.css" />
+      <AnchorPane fx:id="pane" layoutX="228.0" layoutY="24.0" prefHeight="593.0" prefWidth="994.0" />
+      <Button layoutX="75.0" layoutY="547.0" mnemonicParsing="false" onAction="#onClickLogout" text="Logout" />
+      <MenuBar prefHeight="27.0" prefWidth="1222.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Sort">
+               <items>
+                  <Menu fx:id="asc" mnemonicParsing="false" text="Ascending" />
+                  <Menu fx:id="desc" mnemonicParsing="false" text="Descending" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <stylesheets>
+      <URL value="@css/Style.css" />
+      <URL value="@css/Metro-UI.css" />
+   </stylesheets>
+</AnchorPane>
