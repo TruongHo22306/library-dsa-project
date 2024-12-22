@@ -4,10 +4,9 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<!-- div container-->
 
 <AnchorPane id="AnchorPane" prefHeight="327.0" prefWidth="493.0" styleClass="page1" stylesheets="@css/Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.library.controllers.LoginController">
     <children>
@@ -15,22 +14,22 @@
             <children>
                 <TextField fx:id="txtUsername" layoutX="135.0" layoutY="129.0" prefHeight="33.0" prefWidth="305.0" />
                 <PasswordField fx:id="txtPassword" layoutX="135.0" layoutY="202.0" prefHeight="33.0" prefWidth="305.0" />
-                <Text fx:id="lblWelcome" layoutX="49.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To">
+                <Text fx:id="lblWelcome" layoutX="49.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To" fill="white">
                     <font>
                         <Font name="Segoe UI Light" size="44.0" />
                     </font>
                 </Text>
-                <Text fx:id="lblUserLogin" layoutX="103.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management">
+                <Text fx:id="lblUserLogin" layoutX="103.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management" fill="white">
                     <font>
                         <Font name="Segoe UI Light" size="24.0" />
                     </font>
                 </Text>
-                <Text fx:id="lblUsername" layoutX="21.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                <Text fx:id="lblUsername" layoutX="21.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" fill="white">
                     <font>
                         <Font name="Segoe UI" size="16.0" />
                     </font>
                 </Text>
-                <Text fx:id="lblPassword" layoutX="26.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasword:">
+                <Text fx:id="lblPassword" layoutX="26.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" fill="white">
                     <font>
                         <Font name="Segoe UI" size="16.0" />
                     </font>
