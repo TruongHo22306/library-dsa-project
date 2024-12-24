@@ -60,7 +60,7 @@ public class BookDao {
     public Book findById(String id) {
         List<Book> sortedBooks = new ArrayList<>(books);
 
-        sortedBooks.sort(Comparator.comparing(Book::getBookId));
+        //sortedBooks.sort(Comparator.comparing(Book::getBookId));
 
         List<Book> result = GenericAlgorithm.search(sortedBooks, id, Book::getBookId);
 

@@ -82,7 +82,7 @@ public class MenuController implements Initializable {
 
         switch (menuType) {
             case "Book Management":
-                addSortingMenuItems("By Title", "By Quantity");
+                addSortingMenuItems("By Title", "By Quantity", "By Author", "By Date", "By Publisher");
                 break;
             case "Reader Management":
                 addSortingMenuItems("By Name");

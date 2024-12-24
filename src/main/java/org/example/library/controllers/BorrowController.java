@@ -114,10 +114,10 @@ public class BorrowController implements Initializable, SortCallBack {
         String returnDate = null;
         String readerName = txtReaderName.getText();
         String bookName = txtBookName.getText();
-        String status = "Chưa trả";
+        String status = "Not returned";
 
         if (bookId == null || readerId == null) {
-            Notification.alter("Thông báo", Alert.AlertType.WARNING, "Vui lòng chọn độc giả và sách!", null);
+            Notification.alter("Notification", Alert.AlertType.WARNING, "Please choose Author and Book!", null);
             return null;
         }
 

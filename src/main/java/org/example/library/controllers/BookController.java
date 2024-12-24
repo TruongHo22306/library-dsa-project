@@ -78,6 +78,10 @@ public class BookController implements Initializable, SortCallBack {
         BiFunction<Book, Book, Integer> comparator = switch (criterion) {
             case "By Title" -> (b1, b2) -> b1.getBookName().compareTo(b2.getBookName());
             case "By Quantity" -> (b1, b2) -> Integer.compare(b1.getRemaining(), b2.getRemaining());
+            case "By BookID" -> (b1, b2) -> b1.getBookId().compareTo(b2.getBookId());
+            case "By Date" -> (b1, b2) -> b1.getPublishDate().compareTo(b2.getPublishDate());
+            case "By Author" -> (b1, b2) -> b1.getAuthor().compareTo(b2.getAuthor());
+            case "By Publisher" -> (b1, b2) -> b1.getPublisher().compareTo(b2.getPublisher());
             default -> null;
         };
 

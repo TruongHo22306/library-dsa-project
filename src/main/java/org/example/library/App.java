@@ -19,7 +19,7 @@ public class App extends Application {
         stage = primaryStage;
         scene = new Scene(loadFXML("LoginView"), 493, 327);
         stage.setResizable(false);
-        stage.setTitle("LOG IN");
+        stage.setTitle("Login");
         primaryStage.setScene(scene);
 
         primaryStage.show();

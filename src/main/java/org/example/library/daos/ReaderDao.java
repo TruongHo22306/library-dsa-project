@@ -31,7 +31,7 @@ public class ReaderDao {
 
     public Reader findById(String id) {
         List<Reader> sortedReaders = new ArrayList<>(readers);
-        sortedReaders.sort(Comparator.comparing(Reader::getReaderId));
+        //  sortedReaders.sort(Comparator.comparing(Reader::getReaderId));
 
         List<Reader> result = GenericAlgorithm.search(sortedReaders, id, Reader::getReaderId);
         return result.isEmpty() ? null : result.get(0);
